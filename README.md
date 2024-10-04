@@ -23,3 +23,31 @@ Cloud Deployment: AWS services (ECS, RDS, API Gateway, Lambda) for cloud infrast
 3) install requirements
 
     `pip install Flask Flask-JWT-Extended Flask-SQLAlchemy psycopg2-binary`
+
+## Project Structure
+
+### Modules
+
+#### Flask
+
+This imports the Flask class to create a Flask application instance.
+
+Blueprint is used to organize routes into modular components.
+
+Request allows us to use HTTP requests.
+
+Jsonify converts Python dictionaries to JSON format.
+
+#### flask_jwt_extended (JWTManager)
+
+This is the class from flask_jwt_extended to manage JWT authentication.
+
+Creates a new JWT for the user (Flask-JWT-Extended)
+
+#### Flask_sqlalchemy (SQLAlchemy)
+
+This is an ORM (Object Relational Mapper) to interact with the database in a Pythonic way.
+
+#### werkzeug.security.check_password_hash
+
+check_password_hash is a utility from the werkzeug library (which is used internally by Flask) that securely compares a hashed password (typically stored in a database) with a plaintext password provided by the user during login. It's used to verify if the entered password matches the stored hashed password.
